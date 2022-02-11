@@ -1,77 +1,99 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
 body {
+  background-color: gray;
+  /* Use a system font, if none are available use an available sans-sarif font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
   text-align: center;
 }
 
 .board {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.board > section {
   display: grid;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px;
-  background-color: #2196F3;
   justify-content: center;
+  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
+  grid-template-rows: 50px 50px;
+  grid-template-areas:
+        "topPit1 topPit2 topPit3 topPit4 topPit5 topPit6"
+        "botPit1 botPit2 botPit3 botPit4 botPit5 botPit6";
 }
-.board > section > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  font-size: 30px;
-  text-align: center;
-}
-/* section {
-  display: grid;
-  grid-template-rows: repeat(2, 10vmin);
-  grid-template-columns: repeat(6, 10vmin);
-  grid-gap: 10px;
+#p2Store {
+  text-align: left;
+  margin-left: 80px;
+  position: absolute;
+  top: 103px;
 }
 
-.topPit1 {
-  grid-column: 1 / 6;
-  grid-row: 1 / 2;
+#p1Store {
+  text-align: right;
+  /* margin-right:  */
+  position: absolute;
+  top: 100px;
+  right: 134px;
 }
-.topPit2 {
-  grid-column: 2 / 6;
-  grid-row: 1 / 2;
+
+#topPit1 {
+  grid-area: topPit1;
 }
-.topPit3 {
-  grid-column: 3 / 6;
-  grid-row: 1 / 2;
+
+#topPit2 {
+  grid-area: topPit2;
 }
-.topPit4 {
-  grid-column: 4 / 6;
-  grid-row: 1 / 2;
+
+#topPit3 {
+  grid-area: topPit3;
 }
-.topPit5 {
-  grid-column: 5 / 6;
-  grid-row: 1 / 2;
+
+#topPit4 {
+  grid-area: topPit4;
 }
-.topPit6 {
-  grid-column: 6 / 6;
-  grid-row: 1 / 2;
+
+#topPit5 {
+  grid-area: topPit5;
 }
-/*  */
-.botPit1 {
-  grid-column: 1 / 6;
-  grid-row: 2 / 2;
+
+#topPit6 {
+  grid-area: topPit6;
 }
-.botPit2 {
-  grid-column: 2 / 6;
-  grid-row: 2 / 2;
+
+#botPit1 {
+  grid-area: botPit1;
 }
-.botPit3 {
-  grid-column: 3 / 6;
-  grid-row: 2 / 2;
+
+#botPit2 {
+  grid-area: botPit2;
 }
-.botPit4 {
-  grid-column: 4 / 6;
-  grid-row: 2 / 2;
+
+#botPit3 {
+  grid-area: botPit3;
 }
-.botPit5 {
-  grid-column: 5 / 6;
-  grid-row: 2 / 2;
+
+#botPit4 {
+  grid-area: botPit4;
 }
-.botPit6 {
-  grid-column: 6 / 6;
-  grid-row: 2 / 2;
-} */
+
+#botPit5 {
+  grid-area: botPit5;
+}
+
+#botPit6 {
+  grid-area: botPit6;
+}
