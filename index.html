@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link id="favicon" rel="icon"
+    href="./assets/taylor-favicon.png"
+    type="image/png" 
+    sizes="32x32">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap & Data</title>
+  <script
+    defer
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
+    crossorigin="anonymous"
+  ></script>
+  <script src="./js/app.js" type="module"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Playfair+Display:wght@600;700&display=swap" 
+    rel="stylesheet"
+  > 
+  <link 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
+    crossorigin="anonymous"
+  >
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1>Mancala!</h1>
+  <button id="howToButton">How-To Play</button>
+  <section>
+    <div id="player2Icon">
+      <h2>Player 2</h2>
+    </div>
+  </section>
+  <section class="board">
+    <div id="p2store">p2</div>
+    <section id="top">
+      <div id="topPit1">1</div>
+      <div id="topPit2">2</div>
+      <div id="topPit3">3</div>
+      <div id="topPit4">4</div>
+      <div id="topPit5">5</div>
+      <div id="topPit6">6</div>
+    </section>
+    <section id="bottom">
+      <div id="botPit1">1</div>
+      <div id="botPit2">2</div>
+      <div id="botPit3">3</div>
+      <div id="botPit4">4</div>
+      <div id="botPit5">5</div>
+      <div id="botPit6">6</div>
+    </section>
+    <div id="p1store">p1</div>
+  </section>
+  <section>
+    <div id="player1Icon"><h2>Player 1</h2></div>
+  </section>
+  <button class="btn btn-danger">Reset</button>
+</body>
+</html>
