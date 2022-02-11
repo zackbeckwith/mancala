@@ -21,7 +21,7 @@ body {
   background-color: gray;
   /* Use a system font, if none are available use an available sans-sarif font */
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+        Roo, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   text-align: center;
 }
@@ -34,8 +34,8 @@ body {
   grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
   grid-template-rows: 50px 50px;
   grid-template-areas:
-        "p2 topPit0 topPit1 topPit2 topPit3 topPit4 topPit5 p1"
-        "p2 botPit0 botPit1 botPit2 botPit3 botPit4 botPit5 p1";
+        "pit13 pit12 pit11 pit10 pit9 pit8 pit7 pit6"
+        "pit13 pit0 pit1 pit2 pit3 pit4 pit5 pit6";
 }
 #p2Store {
   grid-area: p2;
@@ -45,50 +45,58 @@ body {
   grid-area: p1;
 }
 
-#topPit0 {
-  grid-area: topPit0;
+#pit0 {
+  grid-area: pit0;
 }
 
-#topPit1 {
-  grid-area: topPit1;
+#pit1 {
+  grid-area: pit1;
 }
 
-#topPit2 {
-  grid-area: topPit2;
+#pit2 {
+  grid-area: pit2;
 }
 
-#topPit3 {
-  grid-area: topPit3;
+#pit3 {
+  grid-area: pit3;
 }
 
-#topPit4 {
-  grid-area: topPit4;
+#pit4 {
+  grid-area: pit4;
 }
 
-#topPit5 {
-  grid-area: topPit5;
+#pit5 {
+  grid-area: pit5;
 }
 
-#botPit0 {
-  grid-area: botPit0;
+#pit6 {
+  grid-area: pit6;
 }
 
-#botPit1 {
-  grid-area: botPit1;
+#pit7 {
+  grid-area: pit7;
 }
 
-#botPit2 {
-  grid-area: botPit2;
+#pit8 {
+  grid-area: pit8;
 }
 
-#botPit3 {
-  grid-area: botPit3;
+#pit9 {
+  grid-area: pit9;
 }
 
-#botPit4 {
-  grid-area: botPit4;
+#pit10 {
+  grid-area: pit10;
 }
 
-#botPit5 {
-  grid-area: botPit5;
+#pit11 {
+  grid-area: pit11;
+}
+
+#pit12 {
+  grid-area: pit12;
+}
+
+#pit13 {
+  grid-area: pit13;
 }

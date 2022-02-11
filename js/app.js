@@ -35,21 +35,26 @@ function init() {
 }
 
 function render() {
+  pitElements.forEach(function(pit, idx) {
+    let pitElementIndex = pit.id.slice(3)
+    pit.textContent = board[pitElementIndex]
+  })
   //when render is called, it checks the state of every pit on the board. pit should = number of marbles in it. at start of game this is 4. if player clicks on a pit it empties that pit and adds to however many pits ahead of it that there were marbles in that pit
 }
 
 function handleClick(evt) {
-  marbles = +evt.target.innerHTML
   let start = +evt.target.id.slice(3)
-  evt.target.innerHTML = "0"
-  for (let i = marbles; i > 0; i--){
+  marbles = board[start]
+  board[start] = 0
+  for (let i = 1; i <= marbles; i++){
+    if ((start + i) > 13) {
+      start = 0 - i
+      console.log(start)
+    }
     board[start+i]++
-    if((start+i) > 13){
-      start = 0
-    }
-    }
-    console.log(board)
   }
+  render();
+}
 
 function handleHover() {
 }
