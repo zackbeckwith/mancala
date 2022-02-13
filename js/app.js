@@ -28,7 +28,7 @@ function init() {
            4,4,4,4,4,4,0]
   p1Store = board[6]
   p2Store = board[13]
-  turn = 2
+  turn = 1
   winner = null
 }
 
@@ -39,8 +39,20 @@ function render() {
   })
 }
 
-function handleClick(evt) {
+function handleClick(evt) { //moves marbles 
   let start = +evt.target.id.slice(3)
+  if (start === 6 || start == 13) {
+    console.log('cant do that')
+    return
+  }
+  if (start > 5 && turn === 1) {
+    console.log("no")
+    return
+  }
+  if (start < 6 && turn === 2) {
+    console.log("no")
+    return
+  }
   marbles = board[start]
   board[start] = 0
   for (let i = 1; i <= marbles; i++){
@@ -56,9 +68,17 @@ function handleClick(evt) {
     }
     board[start+i]++
   }
+  turnChange()
   render();
 }
 
+function turnChange() {
+  if (turn === 1){
+    turn++
+  }else {
+    turn--
+  }
+}
 function handleHover() {
 }
 
