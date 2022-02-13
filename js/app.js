@@ -90,7 +90,13 @@ function doubleTurn() {
 }
 
 function steal() {
-  console.log(currentPlace)
+  if (turn === 1) {
+    
+  }
+  
+  if (turn === 2) {
+    
+  }
 }
 
 function turnChange() {
