@@ -29,6 +29,7 @@ function init() {
   p2Store = board[13]
   turn = 1
   winner = null
+  render();
 }
 
 function render() {
@@ -88,6 +89,10 @@ function doubleTurn() {
   }
 }
 
+function steal() {
+  console.log(currentPlace)
+}
+
 function turnChange() {
   if (turn === 1){
     turn++
@@ -103,5 +108,6 @@ function callHowTo() {
 }
 
 function gameReset() {
-  console.log("bye")  
+  init()
+  resetButton.textContent = "Reset"
 }
