@@ -1,9 +1,8 @@
 /*-------------------------------- Constants --------------------------------*/
 
 
-
 /*-------------------------------- Variables --------------------------------*/
-let win, turn, winner, p1Store, p2Store, marbles
+let win, turn, winner, p1Store, p2Store, marbles, currentPlace, marblesInCurrentPlace
 let board = []
 /*------------------------ Cached Element References ------------------------*/
 const pitElements = document.querySelectorAll('.pit')
@@ -41,6 +40,7 @@ function render() {
 
 function handleClick(evt) { //moves marbles 
   let start = +evt.target.id.slice(3)
+
   if (start === 6 || start == 13) {
     console.log('cant do that')
     return
@@ -53,9 +53,11 @@ function handleClick(evt) { //moves marbles
     console.log("no")
     return
   }
+
   marbles = board[start]
   board[start] = 0
   for (let i = 1; i <= marbles; i++){
+    marblesInCurrentPlace=board[start+i]
     if (turn === 2 && start+i === 6) {
       start++
     }
@@ -64,12 +66,26 @@ function handleClick(evt) { //moves marbles
     }
     if ((start + i) > 13) {
       start = 0 - i
-      console.log(start)
     }
     board[start+i]++
+
+    currentPlace = start+i
   }
-  turnChange()
+  if (marblesInCurrentPlace === 0) {
+    steal();
+  }
+  doubleTurn();
+  turnChange();
   render();
+}
+
+function doubleTurn() {
+  if ((turn === 1) && (currentPlace) === 6) {
+    turn++
+  }
+  if ((turn === 2) && (currentPlace) === 13) {
+    turn++
+  }
 }
 
 function turnChange() {
