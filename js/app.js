@@ -55,6 +55,11 @@ function handleClick(evt) { //moves marbles
     return
   }
 
+  if (board[start] === 0) {
+    console.log("no stupid")
+    return
+  }
+
   marbles = board[start]
   board[start] = 0
   for (let i = 1; i <= marbles; i++){
@@ -164,6 +169,11 @@ function winnerCheck(){
   }, 0)
   if (p1Side === 0 || p2Side === 0) {
     winner = board[6] > board[13] ? 1 : 2
+    if (board[6] === board[13]) {
+      winner = 0
+      alert(`it's a tie!`)
+      return
+    }
 
     alert(`the winner is ${winner}!`)
   }
