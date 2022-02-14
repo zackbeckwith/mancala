@@ -171,13 +171,11 @@ function winnerCheck(){
   if (p1Side === 0 || p2Side === 0) {
     p1Side += board[6]
     p2Side += board[13]
-    console.log(`Player 1: ${p1Side}, Player 2: ${p2Side}`)
     board.splice(0,5,0,0,0,0,0,0)
     board.splice(7,5,0,0,0,0,0,0)
     board[6] = p1Side
     board[13] = p2Side
     render()
-    console.log(`Player 1: ${board[6]}, Player 2: ${board[13]}`)
     winner = board[6] > board[13] ? 1 : 2
     if (board[6] === board[13]) {
       winner = 0
