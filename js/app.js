@@ -176,6 +176,7 @@ function winnerCheck(){
     board[6] = p1Side
     board[13] = p2Side
     render()
+    resetButton.textContent = "Replay?"
     winner = board[6] > board[13] ? 1 : 2
     if (board[6] === board[13]) {
       winner = 0
