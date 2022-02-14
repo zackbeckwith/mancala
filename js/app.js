@@ -87,7 +87,7 @@ function handleClick(evt) { //moves marbles
   render();
   winnerCheck();
 }
-
+console.log(board)
 function doubleTurn() {
   if ((turn === 1) && (currentPlace) === 6) {
     turn++
@@ -169,6 +169,15 @@ function winnerCheck(){
     return a + b
   }, 0)
   if (p1Side === 0 || p2Side === 0) {
+    p1Side += board[6]
+    p2Side += board[13]
+    console.log(`Player 1: ${p1Side}, Player 2: ${p2Side}`)
+    board.splice(0,5,0,0,0,0,0,0)
+    board.splice(7,5,0,0,0,0,0,0)
+    board[6] = p1Side
+    board[13] = p2Side
+    render()
+    console.log(`Player 1: ${board[6]}, Player 2: ${board[13]}`)
     winner = board[6] > board[13] ? 1 : 2
     if (board[6] === board[13]) {
       winner = 0
@@ -176,9 +185,8 @@ function winnerCheck(){
       return
     }
 
-    alert(`the winner is ${winner}!`)
+    console.log(`the winner is ${winner}!`)
   }
-  console.log(`Player 1: ${p1Side}, Player 2: ${p2Side}`)
 
 }
 function handleHover() {
