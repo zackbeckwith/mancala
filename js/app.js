@@ -62,6 +62,7 @@ function handleClick(evt) { //moves marbles
 
   marbles = board[start]
   board[start] = 0
+  
   for (let i = 1; i <= marbles; i++){
     marblesInCurrentPlace=board[start+i]
     if (turn === 2 && start+i === 6) {
