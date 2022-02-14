@@ -76,6 +76,7 @@ function handleClick(evt) { //moves marbles
   if (marblesInCurrentPlace === 0) {
     steal();
   }
+  winnerCheck();
   doubleTurn();
   turnChange();
   render();
@@ -91,10 +92,58 @@ function doubleTurn() {
 }
 function steal() {
   if (turn === 1) {
-
+    if (currentPlace === 0 && board[12] > 0) {
+      board[6] += (board[12]+board[0])
+      board[12] = 0
+      board[0] = 0
+    }else if (currentPlace === 1 && board[11] > 0) {
+      board[6] += (board[11]+board[1])
+      board[11] = 0
+      board[1] = 0
+    }else if (currentPlace === 2 && board[10] > 0) {
+      board[6] += (board[10]+board[2])
+      board[10] = 0
+      board[2] = 0
+    }else if (currentPlace === 3 && board[9] > 0) {
+      board[6] += (board[9]+board[3])
+      board[9] = 0
+      board[3] = 0
+    }else if (currentPlace === 4 && board[8] > 0) {
+      board[6] += (board[8]+board[4])
+      board[8] = 0
+      board[4] = 0
+    }else if (currentPlace === 5 && board[7] > 0) {
+      board[6] += (board[7]+board[5])
+      board[7] = 0
+      board[5] = 0
+    }
   }
   if (turn === 2) {
-    
+    if (currentPlace === 12 && board[0] > 0) {
+      board[13] += (board[12]+board[0])
+      board[12] = 0
+      board[0] = 0
+    }else if (currentPlace === 11 && board[1] > 0) {
+      board[13] += (board[11]+board[1])
+      board[11] = 0
+      board[1] = 0
+    }else if (currentPlace === 10 && board[2] > 0) {
+      board[13] += (board[10]+board[2])
+      board[10] = 0
+      board[2] = 0
+    }else if (currentPlace === 9 && board[3] > 0) {
+      board[13] += (board[9]+board[3])
+      board[9] = 0
+      board[3] = 0
+    }else if (currentPlace === 8 && board[4] > 0) {
+      board[13] += (board[8]+board[4])
+      board[8] = 0
+      board[4] = 0
+    }else if (currentPlace === 7 && board[5] > 0) {
+      board[13] += (board[7]+board[5])
+      board[7] = 0
+      board[5] = 0
+    }
   }
 }
 
@@ -104,6 +153,10 @@ function turnChange() {
   }else {
     turn--
   }
+}
+
+function winnerCheck() {
+  
 }
 function handleHover() {
 }
