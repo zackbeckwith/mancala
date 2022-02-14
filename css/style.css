@@ -37,6 +37,14 @@ body {
         "pit13 pit12 pit11 pit10 pit9 pit8 pit7 pit6"
         "pit13 pit0 pit1 pit2 pit3 pit4 pit5 pit6";
 }
+
+.modal-body {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
 #p2Store {
   grid-area: p2;
 }
