@@ -76,10 +76,10 @@ function handleClick(evt) { //moves marbles
   if (marblesInCurrentPlace === 0) {
     steal();
   }
-  winnerCheck();
   doubleTurn();
   turnChange();
   render();
+  winnerCheck();
 }
 
 function doubleTurn() {
@@ -155,8 +155,20 @@ function turnChange() {
   }
 }
 
-function winnerCheck() {
-  
+function winnerCheck(){
+  let p1Side = board.slice(0,6).reduce(function(a, b){
+    return a + b
+  }, 0)
+  let p2Side = board.slice(7,13).reduce(function(a, b){
+    return a + b
+  }, 0)
+  if (p1Side === 0 || p2Side === 0) {
+    winner = board[6] > board[13] ? 1 : 2
+
+    alert(`the winner is ${winner}!`)
+  }
+  console.log(`Player 1: ${p1Side}, Player 2: ${p2Side}`)
+
 }
 function handleHover() {
 }
