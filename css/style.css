@@ -24,18 +24,21 @@ body {
         Roo, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   margin: 0;
   text-align: center;
-  display: flex;
-  flex-direction: column;
+  
 }
-/* .board
-{
-  display:flex;
-  background-color:SaddleBrown;
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:
   height:200px;
-  width:800px;
+  width:500px;
   border-radius:50px;
-  padding:30px;
-} */
+  padding:50px;
+  margin: auto;
+}
+
 .board {
   display: grid;
   justify-content: center;
@@ -49,12 +52,11 @@ body {
 }
 
 .modal-body {
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  display: flex;
-}
+    align-items: center;
+    flex-direction: column;
+    display: flex;
 
+  }
 #p2Store {
   grid-area: p2;
 }
