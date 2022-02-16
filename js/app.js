@@ -1,12 +1,6 @@
 /*-------------------------------- Constants --------------------------------*/
 const pop = new Audio('./sounds/pop.wav')
 
-const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-  return new bootstrap.Tooltip(tooltipTriggerEl)
-})
-
-
 /*-------------------------------- Variables --------------------------------*/
 let win, turn, winner, p1Store, p2Store, marbles, currentPlace, marblesInCurrentPlace, start
 let board = []
@@ -18,6 +12,10 @@ const howToButton = document.querySelector('#howToButton')
 const resetButton = document.querySelector('#resetButton')
 const p1Icon = document.querySelector('#p1icon') 
 const p2Icon = document.querySelector('#p2icon')
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 /*----------------------------- Event Listeners -----------------------------*/
 pitElements.forEach(function(pit){pit.addEventListener("click",handleClick)})
 pitElements.forEach(function(pit){pit.addEventListener("mouseover",handleHover)})
@@ -45,7 +43,6 @@ function render() {
     let pitElementIndex = pit.id.slice(3)
     pit.textContent = board[pitElementIndex]
     pit.setAttribute("data-bs-original-title", pit.textContent)
-    console.log(pit)
   })
 }
 
@@ -53,20 +50,16 @@ function handleClick(evt) { //moves marbles
   start = +evt.target.id.slice(3)
 
   if (start === 6 || start == 13) {
-    console.log('cant do that')
     return
   }
   if (start > 5 && turn === 1) {
-    console.log("no")
     return
   }
   if (start < 6 && turn === 2) {
-    console.log("no")
     return
   }
 
   if (board[start] === 0) {
-    console.log("no stupid")
     return
   }
 
