@@ -1,5 +1,5 @@
 /*-------------------------------- Constants --------------------------------*/
-
+const pop = new Audio('./sounds/pop.wav')
 
 /*-------------------------------- Variables --------------------------------*/
 let win, turn, winner, p1Store, p2Store, marbles, currentPlace, marblesInCurrentPlace, start
@@ -77,7 +77,7 @@ function handleClick(evt) { //moves marbles
       start = 0 - i
     }
     board[start+i]++
-
+    pop.play();
     currentPlace = start+i
     console.log(currentPlace)
   }
@@ -159,10 +159,14 @@ function turnChange() {
     turn++
     p2Icon.style.fontWeight = "bold"
     p1Icon.style.fontWeight = "normal"
+    p2Icon.classList.add('animate__animated', 'animate__headShake')
+    p1Icon.classList.remove('animate__animated', 'animate__headShake')
   }else {
     turn--
     p1Icon.style.fontWeight = "bold"
     p2Icon.style.fontWeight = "normal"
+    p1Icon.classList.add('animate__animated', 'animate__headShake')
+    p2Icon.classList.remove('animate__animated', 'animate__headShake')
   }
 }
 
