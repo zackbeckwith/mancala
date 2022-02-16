@@ -10,6 +10,8 @@ const p2StoreEl = document.querySelector('#p2Store')
 const p1StoreEl = document.querySelector('#p1Store')
 const howToButton = document.querySelector('#howToButton')
 const resetButton = document.querySelector('#resetButton')
+const p1Icon = document.querySelector('#p1icon') 
+const p2Icon = document.querySelector('#p2icon')
 /*----------------------------- Event Listeners -----------------------------*/
 pitElements.forEach(function(pit){pit.addEventListener("click",handleClick)})
 pitElements.forEach(function(pit){pit.addEventListener("mouseover",handleHover)})
@@ -87,7 +89,6 @@ function handleClick(evt) { //moves marbles
   render();
   winnerCheck();
 }
-console.log(board)
 function doubleTurn() {
   if ((turn === 1) && (currentPlace) === 6) {
     turn++
@@ -156,8 +157,12 @@ function steal() {
 function turnChange() {
   if (turn === 1){
     turn++
+    p2Icon.style.fontWeight = "bold"
+    p1Icon.style.fontWeight = "normal"
   }else {
     turn--
+    p1Icon.style.fontWeight = "bold"
+    p2Icon.style.fontWeight = "normal"
   }
 }
 
