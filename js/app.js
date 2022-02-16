@@ -18,12 +18,6 @@ const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
 })
 /*----------------------------- Event Listeners -----------------------------*/
 pitElements.forEach(function(pit){pit.addEventListener("click",handleClick)})
-pitElements.forEach(function(pit){pit.addEventListener("mouseover",handleHover)})
-
-// p1StoreEl.addEventListener("mouseover",handleHover)
-// p2StoreEl.addEventListener("mouseover",handleHover)
-
-howToButton.addEventListener("click",callHowTo)
 resetButton.addEventListener("click",gameReset)
 /*-------------------------------- Functions --------------------------------*/
 init();
@@ -80,7 +74,6 @@ function handleClick(evt) { //moves marbles
     }
     board[start+i]++
     currentPlace = start+i
-    console.log(currentPlace)
   }
   if (marblesInCurrentPlace === 0) {
     steal();
@@ -194,15 +187,8 @@ function winnerCheck(){
       return
     }
 
-    console.log(`the winner is ${winner}!`)
+    alert(`the winner is ${winner}!`)
   }
-
-}
-function handleHover() {
-}
-
-function callHowTo() {
-  console.log("help")  
 }
 
 function gameReset() {
