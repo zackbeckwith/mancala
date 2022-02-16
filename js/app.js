@@ -1,6 +1,10 @@
 /*-------------------------------- Constants --------------------------------*/
 const pop = new Audio('./sounds/pop.wav')
 
+const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  return new bootstrap.Tooltip(tooltipTriggerEl)
+})
 
 
 /*-------------------------------- Variables --------------------------------*/
@@ -40,6 +44,8 @@ function render() {
   pitElements.forEach(function(pit) {
     let pitElementIndex = pit.id.slice(3)
     pit.textContent = board[pitElementIndex]
+    pit.setAttribute("data-bs-original-title", pit.textContent)
+    console.log(pit)
   })
 }
 
