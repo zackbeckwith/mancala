@@ -57,26 +57,34 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  height:300px;
-  width:700px;
+  height:200px;
+  width:750px;
   background-color: rgb(196, 109, 9);
+  background-image: url('../images/woodgrain.jpeg');
+  background-size: 200px 750px;
   border-radius:50px;
-  padding:50px;
+  padding-right: 5px;
   margin: auto;
 }
 .pit {
-  background-color: red;
+  background-color: black;
+  opacity: 0.3;
   border-radius: 50%;
-  padding: 10px;
-  margin: 50px 50px;
+  height: 75px;
+  width: 75px;
+  margin: 15px;
+}
+.store {
+  height: 150px;
+  border-radius: 40%;
 }
 .board {
   display: grid;
   justify-content: center;
   align-items: center;
   font-size: 2.5rem;
-  grid-template-columns: 50px 50px 50px 50px 50px 50px 50px;
-  grid-template-rows: 50px 50px;
+  grid-template-columns: 100px 80px 80px 80px 80px 80px 80px 100px;
+  grid-template-rows: 100px 100px;
   grid-template-areas:
         "pit13 pit12 pit11 pit10 pit9 pit8 pit7 pit6"
         "pit13 pit0 pit1 pit2 pit3 pit4 pit5 pit6";
@@ -86,14 +94,8 @@ main {
     align-items: center;
     flex-direction: column;
     display: flex;
-  }
-#p2Store {
-  grid-area: p2;
-}
 
-#p1Store {
-  grid-area: p1;
-}
+  }
 
 #pit0 {
   grid-area: pit0;
@@ -121,6 +123,7 @@ main {
 
 #pit6 {
   grid-area: pit6;
+  margin: 40px;
 }
 
 #pit7 {
@@ -149,4 +152,5 @@ main {
 
 #pit13 {
   grid-area: pit13;
+  margin: 0px 45px 0px 10px;
 }

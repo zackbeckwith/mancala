@@ -1,6 +1,8 @@
 /*-------------------------------- Constants --------------------------------*/
 const pop = new Audio('./sounds/pop.wav')
 
+
+
 /*-------------------------------- Variables --------------------------------*/
 let win, turn, winner, p1Store, p2Store, marbles, currentPlace, marblesInCurrentPlace, start
 let board = []
@@ -66,6 +68,7 @@ function handleClick(evt) { //moves marbles
   board[start] = 0
   
   for (let i = 1; i <= marbles; i++){
+    pop.play()
     marblesInCurrentPlace=board[start+i]
     if (turn === 2 && start+i === 6) {
       start++
@@ -77,7 +80,6 @@ function handleClick(evt) { //moves marbles
       start = 0 - i
     }
     board[start+i]++
-    pop.play();
     currentPlace = start+i
     console.log(currentPlace)
   }
