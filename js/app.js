@@ -88,7 +88,7 @@ function doubleTurn() {
     turn++
   }
   if ((turn === 2) && (currentPlace) === 13) {
-    turn++
+    turn--
   }
 }
 function steal() {
