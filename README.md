@@ -25,7 +25,7 @@
 <li>Marble Favicon from Clipart-Library.com</li>
 </ul>
 <hr></hr>
-<h2>Planned Icebox Features</h2>
+<h2>Planned Icebox Features🧊</h2>
 
 - [ ] Replace Numbers with Marbles
 - [ ] Change number of base marbles for faster/longer games.
