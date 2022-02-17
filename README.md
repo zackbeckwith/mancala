@@ -20,7 +20,7 @@
 <hr></hr>
 <h2>Credits: 🙌</h2>
 <ul>
-<li>Pop Sound Effect used from Freesound.org by user InspectorJ</li>
+<li>Pop Sound Effect used from <a href="https://freesound.org/people/InspectorJ/sounds/411642/">Freesound.org by user InspectorJ</a></li>
 <li>Animations used from Animate.CSS</li>
 <li>Marble Favicon from Clipart-Library.com</li>
 </ul>
