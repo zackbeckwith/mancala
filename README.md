@@ -1,7 +1,7 @@
 <h1>Mancala!</h1>
 <img src="./images/board.png""/>
 
-<p><strong>https://zackbeckwith.github.io/mancala/</strong></p>
+<h2><strong><a href="https://zackbeckwith.github.io/mancala/">Play it here!</a></strong></h2>
 
 <p>Mancala is one of the oldest board games known to society, with traces back to ancient Egypt. In this project, I made it using a modern-day computer!</p>
 <hr></hr>
