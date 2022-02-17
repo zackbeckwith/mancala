@@ -187,7 +187,7 @@ function winnerCheck(){
       return
     }
 
-    alert(`the winner is player ${winner}!`)
+    alert(`the winner is Player ${winner}!`)
   }
 }
 
