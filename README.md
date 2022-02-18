@@ -35,3 +35,4 @@ Wireframe
 - [ ] AI opponent
 - [ ] Accessibility features: light/dark mode, mobile responsiveness
 - [ ] High score board (won in how many turns?)
+- [ ] Opossum theme for Ben
