@@ -73,6 +73,10 @@ main {
   width: 75px;
   margin: 15px;
 }
+.pit:hover{
+  opacity: 0.5;
+}
+
 .store {
   height: 150px;
   border-radius: 40%;
