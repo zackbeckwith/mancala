@@ -81,6 +81,7 @@ main {
   height: 150px;
   border-radius: 40%;
 }
+
 .board {
   display: grid;
   justify-content: center;

@@ -83,6 +83,7 @@ function handleClick(evt) { //moves marbles
   render();
   winnerCheck();
 }
+
 function doubleTurn() {
   if ((turn === 1) && (currentPlace) === 6) {
     turn++
@@ -91,6 +92,7 @@ function doubleTurn() {
     turn--
   }
 }
+
 function steal() {
   if (turn === 1) {
     if (currentPlace === 0 && board[12] > 0) {
